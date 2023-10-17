@@ -29,6 +29,11 @@ function UserList() {
         return <tr key={user.id}>
             <td style={{whiteSpace: 'nowrap'}}>{user.name}</td>
             <td>{user.email}</td>
+            <td>{user.username}</td>
+            <td>{user.phone}</td>
+            <td>{user.website}</td>
+            <td>{user.company}</td>
+            <td>{user.address}</td>
             <td>
                 <ButtonGroup>
                     <Button size="sm" color="primary" tag={Link} to={"/users/" + user.id}>Edit</Button>
@@ -51,6 +56,11 @@ function UserList() {
                         <tr>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Username</th>
+                            <th>Phone</th>
+                            <th>Website</th>
+                            <th>Company</th>
+                            <th>Address</th>
                             <th>Actions</th>
                         </tr>
                     </thead>

@@ -5,7 +5,7 @@ import AppNavbar from './AppNavbar';
 
 function UserEdit() {
     let navigate = useNavigate();
-    let [user, setUser] = React.useState({ name: '', email: '', id: null });
+    let [user, setUser] = React.useState({ name: '', email: '', username: '', phone: '', website: '', company: '', address: '', id: null });
 
     useEffect(() => {
         const pathNames = window.location.pathname.split('/');
@@ -62,6 +62,31 @@ function UserEdit() {
                         <Label for="email">Email</Label>
                         <Input type="text" name="email" id="email" value={user.email || ''}
                                 onChange={handleChange} autoComplete="email"/>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="username">Username</Label>
+                        <Input type="text" name="username" id="username" value={user.username || ''}
+                                onChange={handleChange} autoComplete="username"/>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="phone">Phone</Label>
+                        <Input type="text" name="phone" id="phone" value={user.phone || ''}
+                                onChange={handleChange} autoComplete="phone"/>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="website">Website</Label>
+                        <Input type="text" name="website" id="website" value={user.website || ''}
+                                onChange={handleChange} autoComplete="website"/>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="company">Company</Label>
+                        <Input type="text" name="company" id="company" value={user.company || ''}
+                                onChange={handleChange} autoComplete="company"/>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="address">Address</Label>
+                        <Input type="text" name="address" id="address" value={user.address || ''}
+                                onChange={handleChange} autoComplete="address"/>
                     </FormGroup>
                     <FormGroup>
                         <Button color="primary" type="submit">Save</Button>{' '}
