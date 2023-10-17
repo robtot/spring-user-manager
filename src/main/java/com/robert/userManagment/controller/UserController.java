@@ -48,6 +48,11 @@ public class UserController {
         User currentUser = repository.findById(id).orElseThrow();
         currentUser.setName(user.getName());
         currentUser.setEmail(user.getEmail());
+        currentUser.setUsername(user.getUsername());
+        currentUser.setPhone(user.getPhone());
+        currentUser.setWebsite(user.getWebsite());
+        currentUser.setCompany(user.getCompany());
+        currentUser.setAddress(user.getAddress());
         currentUser = repository.save(currentUser);
 
         return ResponseEntity.ok(currentUser);

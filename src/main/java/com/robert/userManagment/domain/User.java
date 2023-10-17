@@ -16,6 +16,11 @@ public class User {
 
     private String name;
     private String email;
+    private String username;
+    private String phone;
+    private String website;
+    private String company;
+    private String address;
     
     public Long getId() {
         return id;
@@ -35,5 +40,34 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-
+    public String getUsername() {
+        return username;
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    public String getPhone() {
+        return phone;
+    }
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+    public String getWebsite() {
+        return website;
+    }
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+    public String getCompany() {
+        return company;
+    }
+    public void setCompany(String company) {
+        this.company = company;
+    }
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }
